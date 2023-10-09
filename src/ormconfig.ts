@@ -7,6 +7,9 @@ const config: PostgresConnectionOptions = {
   username: 'todo',
   password: '123',
   database: 'todo',
+  entities: [__dirname + '/**/*.entity{.ts,.js}'],
+  synchronize: false,
+  migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
 };
 
 export default config;
